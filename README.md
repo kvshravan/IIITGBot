@@ -1,5 +1,5 @@
 # IIITGBot
-Auto join classes using the IIITGBot written using python and selenium module. Version 1.0. The bot now has basic functionalities but not yet intelligible to determine which class to be chosen when there are two classes running simultaneously. A database or a text file can be used to store the time table which will be rolled out in the later versions. Currently it joins the class which is either ongoing or the one which is about to start. Based on the assumption no two class start or run at the same time [exception granted for HS classes, HS class variable is taken in cred.py to determine the right HS class to attend].
+Auto join classes using the IIITGBot written using python and selenium module. Version 1.0. The bot now has basic functionalities but not yet intelligible to determine which class to be chosen when there are two classes running simultaneously. A database or a text file can be used to store the time table which will be rolled out in the later versions. Currently it joins the class which is either ongoing or the one which is about to start. Bot works based on the assumption that no two class start or run at the same time [exception granted for HS classes, HS class variable is taken in cred.py to determine the right HS class to attend ].
 
 ## Prerequisites
 Python
@@ -23,3 +23,4 @@ Run the bot using the following command :
 ```
 python main.py
 ```
+This bot has been written in a rush [1.6 hours approx.] :) , So any pull requests fixing issues and bugs are always welcome!
