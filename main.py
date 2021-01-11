@@ -27,6 +27,8 @@ def start_browser():
 				openCurrentOngoingClass()
 			except Exception as e:
 				raise
+		else:
+			print("Page hasnt loaded yet , please change time.sleep value to 10 seconds")		
 		if 'mi.jsp' in driver.current_url:
 			try:
 				joinClass()
@@ -69,5 +71,6 @@ def joinClass():
 		joinBtn.click()
 	except Exception as e:
 		raise
+		exit()
 if __name__ == '__main__':
 	start_browser()
