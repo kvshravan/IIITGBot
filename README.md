@@ -23,4 +23,4 @@ Run the bot using the following command :
 ```
 python main.py
 ```
-This bot has been written in a rush [1.6 hours approx.] :) , So any pull requests fixing issues and bugs are always welcome!
+This bot has been written in a rush [ around 2 hours ] :) , So any pull requests fixing issues and bugs are always welcome!
