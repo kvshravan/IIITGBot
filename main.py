@@ -41,7 +41,7 @@ def start_browser():
 		if 'jnr.jsp' in driver.current_url:
 			print("Joined Successfully")
 			time.sleep(3600)
-			print("Cheking for next class, Press ctrl+c to exit")
+			print("Checking for next class, Press ctrl+c to exit")
 def login():
 	emailId = driver.find_element_by_id("loginId")
 	password = driver.find_element_by_id("password")
