@@ -5,6 +5,7 @@ from selenium.webdriver.support import expected_conditions as EC
 from selenium.webdriver.common.by import By
 from creds import email,passwd,NotHSCourse
 import time
+import datetime
 driver = None
 def start_browser():
 	global driver
@@ -27,8 +28,6 @@ def start_browser():
 				openCurrentOngoingClass()
 			except Exception as e:
 				raise
-		else:
-			print("Page hasnt loaded yet , please change time.sleep value to 10 seconds")		
 		if 'mi.jsp' in driver.current_url:
 			try:
 				joinClass()
@@ -40,8 +39,11 @@ def start_browser():
 			exit()
 		if 'jnr.jsp' in driver.current_url:
 			print("Joined Successfully")
-			time.sleep(3600)
-			print("Checking for next class, Press ctrl+c to exit")
+			now = datetime.datetime.now()
+			timediff = 60-(now.minute)
+			print("Checking for next class in ",timediff," minutes")
+			time.sleep(timediff*60)
+			print("Cheking for next class, Press ctrl+c to exit")
 def login():
 	emailId = driver.find_element_by_id("loginId")
 	password = driver.find_element_by_id("password")
@@ -71,6 +73,5 @@ def joinClass():
 		joinBtn.click()
 	except Exception as e:
 		raise
-		exit()
 if __name__ == '__main__':
 	start_browser()
