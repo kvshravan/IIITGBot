@@ -34,7 +34,7 @@ def start_browser():
 			except Exception as e:
 				raise
 		else:
-			print("No ongoing classes currently.....Exiting")
+			print("No ongoing classes currently or already in a classs....")
 		if 'jnr.jsp' in driver.current_url:
 			print("Joined Successfully")
 			now = datetime.datetime.now()
