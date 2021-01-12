@@ -35,8 +35,6 @@ def start_browser():
 				raise
 		else:
 			print("No ongoing classes currently.....Exiting")
-			driver.quit()
-			exit()
 		if 'jnr.jsp' in driver.current_url:
 			print("Joined Successfully")
 			now = datetime.datetime.now()
@@ -68,7 +66,7 @@ def openCurrentOngoingClass():
 	time.sleep(3)
 def joinClass():
 	try:
-		WebDriverWait(driver, 1200).until(EC.visibility_of_element_located((By.XPATH, "//a[contains(@href,'jnr.jsp')]")))
+		WebDriverWait(driver, 3600).until(EC.visibility_of_element_located((By.XPATH, "//a[contains(@href,'jnr.jsp')]")))
 		joinBtn = driver.find_element_by_xpath("//a[contains(@href,'jnr.jsp')]")
 		joinBtn.click()
 	except Exception as e:
